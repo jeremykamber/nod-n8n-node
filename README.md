@@ -1,38 +1,53 @@
-# nod-n8n-node
+# n8n-nodes-nod
 
-This repository contains the Nod integration for n8n, enabling seamless interaction with the Nod API. Nod is an AI-powered approvals app designed to streamline workflows and decision-making processes.
+This is an n8n community node. It lets you use the Nod AI-powered approvals app in your n8n workflows.
 
-## Features
+Nod is an AI-powered approvals application that streamlines workflow approvals and decision-making processes. With this node, you can create workflows, generate QR codes, and manage approvals directly from your n8n automations.
 
-- Create and manage workflows directly from n8n.
-- Generate QR codes for workflows.
-- Create and update approvals for workflows.
-- Supports dynamic input and output configurations.
+[n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
+
+[Installation](#installation)  
+[Operations](#operations)  
+[Credentials](#credentials)  
+[Compatibility](#compatibility)  
+[Resources](#resources)  
 
 ## Installation
 
-1. Clone this repository into your n8n custom nodes directory.
-2. Install dependencies using `npm install`.
-3. Restart your n8n instance.
+Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes/installation/) in the n8n community nodes documentation.
 
-## Usage
+## Operations
 
-1. Add the "Nod" node to your n8n workflow.
-2. Configure the credentials using the "Nod API" credential type.
-3. Select the desired resource (e.g., Workflow or Approval) and operation.
-4. Provide the required parameters and execute the workflow.
+### Workflow Operations
+- **Create**: Create a new workflow with name and description
+- **Get All**: Retrieve all existing workflows
+- **Generate QR Code**: Generate a QR code for a specific workflow
+
+### Approval Operations
+- **Create**: Create a new approval for a workflow with description and optional metadata
+- **Update Status**: Update an approval's status (pending, approved, or rejected)
 
 ## Credentials
 
-The "Nod API" credential type requires:
+To use this node, you need to authenticate with the Nod API using the **Nod API** credential type. You'll need:
 
-- **API Base URL**: The base URL of your Nod API instance.
-- **API Key**: Your Nod API key for authentication.
+1. **API Base URL**: The base URL of your Nod API instance (e.g., `https://api.your-nod-instance.com`)
+2. **API Key**: Your Nod API key for authentication
 
-## Documentation
+To set up credentials:
+1. In n8n, go to **Credentials** → **Add Credential**
+2. Select **Nod API** from the list
+3. Enter your API Base URL and API Key
+4. Test the connection and save
 
-For detailed documentation, visit [Nod API Documentation](https://nod.dev/docs/n8n-credentials).
+## Compatibility
 
-## License
+- **Minimum n8n version**: 1.0.0
+- **Node.js version**: >=20.15
+- **Tested with**: n8n v1.x
 
-This project is licensed under the MIT License.
+## Resources
+
+* [n8n community nodes documentation](https://docs.n8n.io/integrations/#community-nodes)
+* [Nod API Documentation](https://nod.dev/docs)
+* [Nod Website](https://nod.dev)
